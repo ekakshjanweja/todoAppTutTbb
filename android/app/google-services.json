@@ -1,0 +1,90 @@
+{
+  "project_info": {
+    "project_number": "942479130967",
+    "project_id": "todoapptut",
+    "storage_bucket": "todoapptut.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:942479130967:android:e351151d1aa8798f23fe12",
+        "android_client_info": {
+          "package_name": "com.example.todo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "942479130967-ac97sa0403hjjs76mg5lfco8ile6u8o8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdXQwiSxcVKnSybetZWiRWm2Psnc-PV8k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "942479130967-1v8benac13ad7d5v5amn41p4m32gn15h.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "942479130967-0vg1puiudt0tcrl0h2f4uqb4lqrbf0n7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.todoMain.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:942479130967:android:1737c81380286e9123fe12",
+        "android_client_info": {
+          "package_name": "com.example.todo_main"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "942479130967-ni3a38f4gkr86dge1i1si7n4d0ki19k0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.todo_main",
+            "certificate_hash": "fc484cc34dfd04624908d204246f04ed84af3b61"
+          }
+        },
+        {
+          "client_id": "942479130967-ac97sa0403hjjs76mg5lfco8ile6u8o8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdXQwiSxcVKnSybetZWiRWm2Psnc-PV8k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "942479130967-1v8benac13ad7d5v5amn41p4m32gn15h.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "942479130967-0vg1puiudt0tcrl0h2f4uqb4lqrbf0n7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.todoMain.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
