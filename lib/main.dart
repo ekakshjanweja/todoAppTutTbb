@@ -3,8 +3,8 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:todo_main/features/auth/controller/auth_controller.dart';
+import 'package:todo_main/features/home/view/home_page.dart';
 import 'package:todo_main/firebase_options.dart';
-import 'package:todo_main/home_page.dart';
 import 'package:todo_main/features/auth/view/login_page.dart';
 import 'package:todo_main/models/user_model.dart';
 
