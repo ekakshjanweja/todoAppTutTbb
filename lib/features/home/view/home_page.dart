@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
+import 'package:todo_main/common/providers/firebase_provider.dart';
 import 'package:todo_main/common/widgets/new_task_button.dart';
 import 'package:todo_main/common/widgets/todo_card.dart';
 import 'package:todo_main/features/auth/controller/auth_controller.dart';
+import 'package:todo_main/features/home/controller/todo_controller.dart';
 
 class HomePage extends ConsumerWidget {
   const HomePage({super.key});
@@ -35,7 +37,7 @@ class HomePage extends ConsumerWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       const Text(
-                        'Today\s Tasks',
+                        'Today\'s Tasks',
                         style: TextStyle(
                             fontSize: 24, fontWeight: FontWeight.bold),
                       ),
@@ -57,13 +59,28 @@ class HomePage extends ConsumerWidget {
               //Card Widget
 
               Expanded(
-                child: ListView.builder(
-                  shrinkWrap: true,
-                  itemCount: 10,
-                  itemBuilder: (BuildContext context, int index) {
-                    return const TodoCard();
-                  },
-                ),
+                child: ref
+                    .watch(getTodosProvider(
+                        ref.watch(firebaseAuthProvider).currentUser!.uid))
+                    .when(
+                      data: (data) => ListView.builder(
+                        shrinkWrap: true,
+                        itemCount: data.length,
+                        itemBuilder: (BuildContext context, int index) {
+                          return TodoCard(
+                            todoModel: data[index],
+                          );
+                        },
+                      ),
+                      error: (error, stackTrace) => Scaffold(
+                        body: Center(
+                          child: Text(error.toString()),
+                        ),
+                      ),
+                      loading: () => const Center(
+                        child: CircularProgressIndicator(),
+                      ),
+                    ),
               ),
             ],
           ),

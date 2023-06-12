@@ -5,17 +5,6 @@ import 'package:todo_main/features/auth/controller/auth_controller.dart';
 class LoginPage extends ConsumerWidget {
   const LoginPage({super.key});
 
-  void showSnackBar({
-    required BuildContext context,
-    required String content,
-  }) {
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text(content),
-      ),
-    );
-  }
-
   void signInWithGoogle(WidgetRef ref, BuildContext context) {
     ref
         .read(authControllerProvider.notifier)
